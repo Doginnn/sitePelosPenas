@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -10,20 +11,20 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Avilon - v4.6.1
@@ -40,9 +41,9 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div id="logo">
-        <h1><a href="index.html">Avilon</a></h1>
+        <h1><a href="{% url 'index' %}">Avilon</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a> -->
+        <!-- <a href="index.html"><img src="img/logo.png" alt=""></a> -->
       </div>
 
       <nav id="navbar" class="navbar">
@@ -89,15 +90,15 @@
     <div class="product-screens">
 
       <div class="product-screen-1" data-aos="fade-up" data-aos-delay="400">
-        <img src="assets/img/product-screen-1.png" alt="">
+        <img src="{% static 'img/product-screen-1.png' %}" alt="">
       </div>
 
       <div class="product-screen-2" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/img/product-screen-2.png" alt="">
+        <img src="{% static 'img/product-screen-2.png' %}" alt="">
       </div>
 
       <div class="product-screen-3" data-aos="fade-up">
-        <img src="assets/img/product-screen-3.png" alt="">
+        <img src="{% static 'img/product-screen-3.png' %}" alt="">
       </div>
 
     </div>
@@ -120,7 +121,7 @@
 
         <div class="row">
           <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
-            <img src="assets/img/about-img.jpg" alt="">
+            <img src="{% static 'img/about-img.jpg' %}" alt="">
           </div>
 
           <div class="col-lg-6 content" data-aos="fade-left" dat-aos-delay="100">
@@ -159,7 +160,7 @@
           </div>
 
           <div class="col-lg-4 col-md-5 features-img">
-            <img src="assets/img/product-features.png" alt="" data-aos="fade-right">
+            <img src="{% static 'img/product-features.png' %}" alt="" data-aos="fade-right">
           </div>
 
           <div class="col-lg-8 col-md-7 ">
@@ -203,7 +204,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <img class="advanced-feature-img-right wow fadeInRight" src="assets/img/advanced-feature-1.jpg" alt="">
+              <img class="advanced-feature-img-right wow fadeInRight" src="{% static 'img/advanced-feature-1.jpg' %}" alt="">
               <div>
                 <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
                 <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
@@ -219,7 +220,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <img class="advanced-feature-img-left" src="assets/img/advanced-feature-2.jpg" alt="">
+              <img class="advanced-feature-img-left" src="{% static 'img/advanced-feature-2.jpg' %}" alt="">
               <div>
                 <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
                 <i class="bi bi-calendar4-week"></i>
@@ -238,7 +239,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <img class="advanced-feature-img-right wow fadeInRight" src="assets/img/advanced-feature-3.jpg" alt="">
+              <img class="advanced-feature-img-right wow fadeInRight" src="{% static 'img/advanced-feature-3.jpg' %}" alt="">
               <div>
                 <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
                 <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
@@ -323,27 +324,27 @@
         <div class="row">
 
           <div class="col-md-2">
-            <img src="assets/img/clients/client-1.png" alt="">
+            <img src="{% static 'img/clients/client-1.png' %}" alt="">
           </div>
 
           <div class="col-md-2">
-            <img src="assets/img/clients/client-2.png" alt="">
+            <img src="{% static 'img/clients/client-2.png' %}" alt="">
           </div>
 
           <div class="col-md-2">
-            <img src="assets/img/clients/client-3.png" alt="">
+            <img src="{% static 'img/clients/client-3.png' %}" alt="">
           </div>
 
           <div class="col-md-2">
-            <img src="assets/img/clients/client-4.png" alt="">
+            <img src="{% static 'img/clients/client-4.png' %}" alt="">
           </div>
 
           <div class="col-md-2">
-            <img src="assets/img/clients/client-5.png" alt="">
+            <img src="{% static 'img/clients/client-5.png' %}" alt="">
           </div>
 
           <div class="col-md-2">
-            <img src="assets/img/clients/client-6.png" alt="">
+            <img src="{% static 'img/clients/client-6.png' %}" alt="">
           </div>
 
         </div>
@@ -493,7 +494,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-1.jpg' %}" alt=""></div>
               <h4>Walter White</h4>
               <span>Chief Executive Officer</span>
               <div class="social">
@@ -507,7 +508,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-2.jpg' %}" alt=""></div>
               <h4>Sarah Jhinson</h4>
               <span>Product Manager</span>
               <div class="social">
@@ -521,7 +522,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-3.jpg' %}" alt=""></div>
               <h4>William Anderson</h4>
               <span>CTO</span>
               <div class="social">
@@ -535,7 +536,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/team-4.jpg' %}" alt=""></div>
               <h4>Amanda Jepson</h4>
               <span>Accountant</span>
               <div class="social">
@@ -564,48 +565,48 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="">
+              <a href="{% static 'img/gallery/gallery-1.jpg' %}" data-gall="portfolioGallery" class="gallery-lightbox">
+                <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="">
               </a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="">
+              <a href="{% static 'img/gallery/gallery-2.jpg' %}" data-gall="portfolioGallery" class="gallery-lightbox">
+                <img src="{% static 'img/gallery/gallery-2.jpg' %}" alt="">
               </a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="">
+              <a href="{% static 'img/gallery/gallery-3.jpg' %}" data-gall="portfolioGallery" class="gallery-lightbox">
+                <img src="{% static 'img/gallery/gallery-3.jpg' %}" alt="">
               </a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="">
+              <a href="{% static 'img/gallery/gallery-4.jpg' %}" data-gall="portfolioGallery" class="gallery-lightbox">
+                <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="">
               </a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="">
+              <a href="{% static 'img/gallery/gallery-5.jpg' %}" data-gall="portfolioGallery" class="gallery-lightbox">
+                <img src="{% static 'img/gallery/gallery-5.jpg' %}" alt="">
               </a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="">
+              <a href="i{% static 'mg/gallery/gallery-6.jpg' %}" data-gall="portfolioGallery" class="gallery-lightbox">
+                <img src="{% static 'img/gallery/gallery-6.jpg' %}" alt="">
               </a>
             </div>
           </div>
@@ -721,13 +722,13 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 
