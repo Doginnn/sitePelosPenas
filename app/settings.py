@@ -127,12 +127,16 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # E-mail Information
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get('EMAIL_USER_GMAIL')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD_GMAIL')
-EMAIL_PORT = 587
-EMAIL_USE_TSL = True
+# EMAIL SETTINGS
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
+# ADMIN EMAIL
+ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL')
 
 # # Twilio SendGrid Email
 # CONTACT_EMAIL = 'contatopelosepenas@gmail.com'
