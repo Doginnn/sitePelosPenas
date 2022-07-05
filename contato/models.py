@@ -7,4 +7,4 @@ class Contato(models.Model):
     menssagem = models.TextField(max_length=256)
 
     def __str__(self):
-        return self.titulo, self.email
+        return self.titulo, self.email, self.nome
