@@ -1,29 +1,52 @@
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.core.mail import send_mail
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
-from .forms import ContatoForm
+# from .forms import ContatoForm
+from .forms import ContactForm
 
 
 def index(request):
     count = User.objects.count()
     return render(request, 'index.html', {"count": count})
 
-
-def contato(request):
+def contact(request):
     if request.method == 'POST':
-        form = ContatoForm(request.POST)
+        form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-            return render(request, 'index.html')
-    form = ContatoForm()
-    context = {'form': form}
-    return render(request, 'parciais/_formContato.html', context)
+            subject = "Consulta ao site"
+            body = {
+                'nome': form.cleaned_data['nome'],
+                'email': form.cleaned_data['email'],
+                'titulo': form.cleaned_data['titulo'],
+                'menssagem': form.cleaned_data['menssagem'],
+            }
+            message = "\n" . join(body.values())
+
+            try:
+                send_mail(subject, message, 'contatopelosepenas@gmail.com', ['contatopelosepenas@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Cabeçalho inválido!')
+            return redirect("index.html")
+
+    form = ContactForm()
+    return render(request, 'parciais/_formContato.html', {'form': form})
+
+
+# def contato(request):
+#     if request.method == 'POST':
+#         form = ContatoForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return render(request, 'index.html')
+#     form = ContatoForm()
+#     context = {'form': form}
+#     return render(request, 'parciais/_formContato.html', context)
 
 # class ContactView(CreateView):
 #     form_class = ContatoForm
