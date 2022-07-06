@@ -18,7 +18,7 @@
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
       
       if( ! action ) {
-        displayError(thisForm, 'A propriedade de ação do formulário não está definida!')
+        displayError(thisForm, 'A Action para envio do form não está definida!')
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
